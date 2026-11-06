@@ -54,7 +54,7 @@ jobs:
       - run: cargo test --workspace --no-fail-fast
       - name: Upload probe artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: probe-output-${{ matrix.os }}
           path: probe-output/
