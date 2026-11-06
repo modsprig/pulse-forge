@@ -1,0 +1,14 @@
+# PF-008 GUI feasibility spike — DEV-ONLY, intentionally NOT a workspace
+# member (the product workspace stays zero-dependency per ADR-011; this
+# spike exists to produce measured evidence for the v0.4 GUI decision).
+[package]
+name = "pf-gui-spike"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pollster = "0.3"
+egui = "0.27"
+wgpu = "0.19"
+
+[workspace]

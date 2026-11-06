@@ -1,0 +1,25 @@
+[package]
+name = "pf-test-support"
+description = "PulseForge deterministic fixture workloads, probes and benchmark harnesses"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+pf-types = { path = "../pf-types" }
+pf-platform = { path = "../pf-platform" }
+pf-analysis = { path = "../pf-analysis" }
+
+[target."cfg(windows)".dependencies]
+pf-windows = { path = "../pf-windows" }
+
+[target."cfg(target_os = \"linux\")".dev-dependencies]
+pf-linux = { path = "../pf-linux" }
+pf-daemon = { path = "../pf-daemon" }
+
+[target."cfg(windows)".dev-dependencies]
+pf-daemon = { path = "../pf-daemon" }
+
+[lints]
+workspace = true

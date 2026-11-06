@@ -1,0 +1,14 @@
+[package]
+name = "pf-linux"
+description = "PulseForge Linux backend: /proc counters, boot-id identity, platform capabilities"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+pf-types = { path = "../pf-types" }
+pf-platform = { path = "../pf-platform" }
+
+[lints]
+workspace = true

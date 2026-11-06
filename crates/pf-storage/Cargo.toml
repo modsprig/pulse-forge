@@ -1,0 +1,16 @@
+[package]
+name = "pf-storage"
+description = "PulseForge durable session storage: versioned binary chunks, checksums, crash recovery, bounded ranged queries"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+pf-types = { path = "../pf-types" }
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+pf-platform = { path = "../pf-platform" }

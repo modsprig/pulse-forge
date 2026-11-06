@@ -1,0 +1,6 @@
+{"study": "observer overhead (wall time, ms)", "workload_ms": 2000, "reps": 7, "cells": {
+  "bare": {"median": 2036, "runs": [2079,2036,2036,2035,2035,2036,2036]},
+  "recorded_100ms": {"median": 2101, "runs": [2098,2100,2099,2101,2104,2102,2115]},
+  "recorded_250ms": {"median": 2197, "runs": [2196,2197,2197,2198,2196,2298,2210]},
+  "recorded_1000ms": {"median": 2204, "runs": [2225,2202,2204,2255,2277,2199,2196]}
+}}

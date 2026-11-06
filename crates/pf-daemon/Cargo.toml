@@ -1,0 +1,22 @@
+[package]
+name = "pf-daemon"
+description = "PulseForge per-user daemon: session supervisor, single-instance lifecycle, local IPC service"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+pf-types = { path = "../pf-types" }
+pf-platform = { path = "../pf-platform" }
+pf-storage = { path = "../pf-storage" }
+pf-analysis = { path = "../pf-analysis" }
+
+[target."cfg(windows)".dependencies]
+pf-windows = { path = "../pf-windows" }
+
+[target."cfg(target_os = \"linux\")".dependencies]
+pf-linux = { path = "../pf-linux" }
+
+[lints]
+workspace = true

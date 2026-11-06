@@ -1,0 +1,6 @@
+# Pinned toolchain for reproducible builds (architecture baseline: edition 2024).
+# Bump deliberately, together with CI, after checking `cargo clippy` and tests.
+[toolchain]
+channel = "1.97.1"
+profile = "minimal"
+components = ["rustfmt", "clippy"]

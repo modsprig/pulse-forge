@@ -1,0 +1,18 @@
+{
+  "egui_headless": {
+    "frames": 60,
+    "chart_points": 100000,
+    "table_rows_total": 10000,
+    "pass_ms": {"p50": 3.819, "p95": 5.290, "max": 8.464},
+    "tessellation_ms": {"p50": 3.489, "p95": 4.780, "max": 6.154},
+    "vertices_peak": 315550
+  },
+  "wgpu_offscreen": {
+    "adapter": "example-adapter (D3D12/Vulkan-class)",
+    "backend": "Vulkan",
+    "triangle_pixels_nonzero": true,
+    "render_and_readback_ms": 1.634
+  },
+  "done": true
+}
+

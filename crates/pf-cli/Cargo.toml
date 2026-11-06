@@ -1,0 +1,29 @@
+[package]
+name = "pf-cli"
+description = "pulseforge command-line interface"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "pulseforge"
+path = "src/main.rs"
+
+[dependencies]
+pf-types = { path = "../pf-types" }
+pf-platform = { path = "../pf-platform" }
+pf-storage = { path = "../pf-storage" }
+pf-analysis = { path = "../pf-analysis" }
+pf-test-support = { path = "../pf-test-support" }
+
+[target."cfg(windows)".dependencies]
+pf-windows = { path = "../pf-windows" }
+pf-daemon = { path = "../pf-daemon" }
+
+[target."cfg(target_os = \"linux\")".dependencies]
+pf-linux = { path = "../pf-linux" }
+pf-daemon = { path = "../pf-daemon" }
+
+[lints]
+workspace = true

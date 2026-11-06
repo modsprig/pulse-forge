@@ -1,0 +1,31 @@
+{
+    "validation":  "pulseforge vs Get-Process, same process, same run",
+    "os":  "Microsoft Windows NT 10.0.0.0",
+    "pid":  107324,
+    "ps_samples":  11,
+    "pf_samples":  16,
+    "working_set_peak":  {
+                             "pulseforge":  3956736.0,
+                             "get_process":  3956736,
+                             "rel_diff":  0,
+                             "agree":  true
+                         },
+    "private_commit_max":  {
+                               "pulseforge":  2351104.0,
+                               "get_process":  2351104,
+                               "rel_diff":  0,
+                               "agree":  true
+                           },
+    "threads_max":  {
+                        "pulseforge":  4.0,
+                        "get_process":  4,
+                        "agree":  true
+                    },
+    "cpu_accounting":  {
+                           "pulseforge_core_pct_mean":  0.8324657046713547,
+                           "pulseforge_user_ns_delta":  31250000.0,
+                           "get_process_cpu_s_delta":  0.03125,
+                           "note":  "both implementations read GetProcessTimes-derived values; sandboxes may report zero for spawned processes"
+                       },
+    "session":  "<localappdata>\\AppData\\Local\\Temp\\pf-validate-81b9d063\\01a16f95-2d20-7a0b-8544-78baddd2ab18.pfsession"
+}

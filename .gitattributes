@@ -1,0 +1,4 @@
+# Canonical line endings for a cross-platform Rust project.
+* text=auto eol=lf
+*.png binary
+*.docx binary

@@ -1,0 +1,51 @@
+# cargo-deny configuration (PF-108). The product workspace held a
+# zero-dependency baseline until ADR-015 introduced eframe/egui for the
+# GUI crate; this file keeps that decision reviewed and bounded.
+
+[graph]
+all-features = false
+no-default-features = false
+
+[licenses]
+version = 2
+# Allow the common OSI licenses found in the Rust GUI ecosystem; anything
+# else fails CI and needs a deliberate addition here (with a comment).
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-3.0",
+    "Zlib",
+    "CC0-1.0",
+    "CDLA-Permissive-2.0",
+    # Additional permissive licenses present in the locked dependency tree
+    # (each verified OSI-recognized before addition):
+    "0BSD",                # adler2
+    "Unlicense",           # memchr, aho-corasick, walkdir, ...
+    "BSL-1.0",             # clipboard-win, error-code (Boost)
+    "OFL-1.1",             # epaint embedded fonts
+    "LicenseRef-UFL-1.0",  # epaint embedded fonts (Ubuntu Font Licence)
+    "LGPL-2.1-or-later",   # r-efi alternative clause (OR with MIT/Apache)
+]
+confidence-threshold = 0.93
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+skip = [
+    # egui/wgpu ecosystem versions that legitimately coexist during 0.27
+    # pinning; revisit on the next eframe bump.
+    { name = "wgpu-types" },
+]
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+
+[advisories]
+version = 2
+yanked = "warn"

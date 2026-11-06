@@ -1,0 +1,10 @@
+[package]
+name = "pf-types"
+description = "PulseForge core types: process identity, metric taxonomy, units, errors, bounded JSON"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
