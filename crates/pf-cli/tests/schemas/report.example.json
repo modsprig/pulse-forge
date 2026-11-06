@@ -1,0 +1,204 @@
+{
+  "schema": "pulseforge.report/0",
+  "session_id": "01a17a87-daa5-7702-84e6-9919ca46ae27",
+  "mode": "counters",
+  "state": "COMPLETED",
+  "stop_reason": "duration_reached",
+  "samples": 6,
+  "target": {
+    "identity": {
+      "os": "windows",
+      "pid": 105420,
+      "creation_identity": 134375306859633489,
+      "boot_identity": "boot~134362310779472379"
+    },
+    "image": "\\Device\\HarddiskVolume1\\build\\pulseforge\\target\\release\\pf-fixture-cpu.exe",
+    "logical_cpus": 16
+  },
+  "metrics": {
+    "process.cpu_core_pct": {
+      "unit": "percent",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 5,
+      "min": 0.0,
+      "max": 0.0,
+      "first": 0.0,
+      "last": 0.0,
+      "mean": 0.0
+    },
+    "process.cpu_machine_pct": {
+      "unit": "percent",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 5,
+      "min": 0.0,
+      "max": 0.0,
+      "first": 0.0,
+      "last": 0.0,
+      "mean": 0.0
+    },
+    "process.cpu_user_ns": {
+      "unit": "nanoseconds",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 0.0,
+      "max": 0.0,
+      "first": 0.0,
+      "last": 0.0,
+      "mean": 0.0
+    },
+    "process.cpu_kernel_ns": {
+      "unit": "nanoseconds",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 0.0,
+      "max": 0.0,
+      "first": 0.0,
+      "last": 0.0,
+      "mean": 0.0
+    },
+    "process.cpu_total_ns": {
+      "unit": "nanoseconds",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 0.0,
+      "max": 0.0,
+      "first": 0.0,
+      "last": 0.0,
+      "mean": 0.0
+    },
+    "process.resident_bytes": {
+      "unit": "bytes",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 3207168.0,
+      "max": 3207168.0,
+      "first": 3207168.0,
+      "last": 3207168.0,
+      "mean": 3207168.0
+    },
+    "process.resident_peak_bytes": {
+      "unit": "bytes",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 3207168.0,
+      "max": 3207168.0,
+      "first": 3207168.0,
+      "last": 3207168.0,
+      "mean": 3207168.0
+    },
+    "process.private_commit_bytes": {
+      "unit": "bytes",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 622592.0,
+      "max": 622592.0,
+      "first": 622592.0,
+      "last": 622592.0,
+      "mean": 622592.0
+    },
+    "process.private_commit_peak_bytes": {
+      "unit": "bytes",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 634880.0,
+      "max": 634880.0,
+      "first": 634880.0,
+      "last": 634880.0,
+      "mean": 634880.0
+    },
+    "process.io_read_ops": {
+      "unit": "count",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 1.0,
+      "max": 1.0,
+      "first": 1.0,
+      "last": 1.0,
+      "mean": 1.0
+    },
+    "process.io_write_ops": {
+      "unit": "count",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 0.0,
+      "max": 0.0,
+      "first": 0.0,
+      "last": 0.0,
+      "mean": 0.0
+    },
+    "process.io_transfer_read_bytes": {
+      "unit": "bytes",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 1964.0,
+      "max": 1964.0,
+      "first": 1964.0,
+      "last": 1964.0,
+      "mean": 1964.0
+    },
+    "process.io_transfer_write_bytes": {
+      "unit": "bytes",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 0.0,
+      "max": 0.0,
+      "first": 0.0,
+      "last": 0.0,
+      "mean": 0.0
+    },
+    "process.thread_count": {
+      "unit": "count",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 4.0,
+      "max": 4.0,
+      "first": 4.0,
+      "last": 4.0,
+      "mean": 4.0
+    },
+    "process.handle_count": {
+      "unit": "count",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 54.0,
+      "max": 54.0,
+      "first": 54.0,
+      "last": 54.0,
+      "mean": 54.0
+    },
+    "process.page_faults": {
+      "unit": "count",
+      "availability": "available",
+      "samples": 6,
+      "available_samples": 6,
+      "min": 825.0,
+      "max": 825.0,
+      "first": 825.0,
+      "last": 825.0,
+      "mean": 825.0
+    }
+  },
+  "polling": {
+    "poll_cost_p50_ms": 0.0,
+    "poll_cost_max_ms": 0.0
+  },
+  "warnings": [
+    "recording stopped at budget; child pid 105420 (launched by this session) was terminated as direct-parent cleanup",
+    "ENVIRONMENT: process CPU time counters report zero on this machine for this process (observed in some sandboxes; cross-checked with an independent tool during probing) \u2014 CPU rates are structurally correct but read 0%"
+  ]
+}

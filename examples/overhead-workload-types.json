@@ -1,0 +1,6 @@
+{"study": "observer overhead by workload type", "reps": 5, "cells": {
+  "mixed": {"bare_median": 2064, "recorded_median": 2192, "overhead_pct": 6.2 }
+,
+  "threads": {"bare_median": 2032, "recorded_median": 2191, "overhead_pct": 7.8 }
+
+}}

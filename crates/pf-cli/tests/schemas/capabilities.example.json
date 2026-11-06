@@ -1,0 +1,17 @@
+{
+  "tool": "pulseforge",
+  "version": "0.1.0",
+  "os": "windows",
+  "os_version": "windows x86_64 (16 logical CPUs)",
+  "logical_cpus": 16,
+  "counters": {
+    "available": true,
+    "reason_code": "",
+    "detail": ""
+  },
+  "cpu_stack_sampling": {
+    "available": false,
+    "reason_code": "NOT_IMPLEMENTED",
+    "detail": "ETW stack sampling ships in milestone v0.6; see docs/feasibility-results.md for the privilege probe"
+  }
+}

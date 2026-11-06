@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build-windows:
+    name: Windows x64 artifacts (PF-1302)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.97.1
+      - uses: Swatinem/rust-cache@v2
+      - name: Test before packaging (release profile gates the scale tests)
+        run: cargo test --workspace --release --no-fail-fast
+      - name: Package (binaries + docs + SHA-256)
+        shell: bash
+        run: bash tools/package-release.sh
+      - name: Smoke test the packaged binary
+        shell: bash
+        run: |
+          STAGE=$(ls -d dist/stage/pulseforge-*-windows-x64)
+          "$STAGE/pulseforge.exe" version
+          "$STAGE/pulseforge.exe" capabilities > /dev/null
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-x64-release
+          path: |
+            dist/*.zip
+            dist/*.sha256
+
+  publish:
+    name: Attach artifacts to the release
+    needs: [build-windows]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-x64-release
+          path: dist
+      - name: Attach to the GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.zip
+            dist/*.sha256
+          generate_release_notes: true

@@ -1,0 +1,13 @@
+[package]
+name = "pf-analysis"
+description = "PulseForge analysis: observed-delta A/B comparison with honest statistics and stack aggregation"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+pf-types = { path = "../pf-types" }
+
+[lints]
+workspace = true

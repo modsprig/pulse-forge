@@ -1,0 +1,35 @@
+# Rust
+/target
+**/*.rs.bk
+
+# Local agent workspace (handoff notes, original briefs)
+/.local/
+
+# Session data produced by pulseforge itself
+*.pfsession/
+/.pulsedata/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Probe scratch output (kept out of the repo; evidence lives in docs/.local/)
+/probe-output/
+
+# Per-crate target dirs (ui snapshots land here)
+**/target/
+/target-test/
+ui-snapshots/
+
+# Release packaging output
+/dist/
+
+# Private internal documentation (architecture, roadmap, feasibility
+# evidence, ADRs) — local working notes, not part of the distribution
+/docs/.local/
+/probe-output/soak/data/

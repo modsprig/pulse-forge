@@ -1,0 +1,30 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/pf-types",
+    "crates/pf-platform",
+    "crates/pf-windows",
+    "crates/pf-test-support",
+    "crates/pf-daemon",
+    "crates/pf-storage",
+    "crates/pf-analysis",
+    "crates/pf-gui",
+    "crates/pf-linux",
+    "crates/pf-cli",
+]
+
+[workspace.package]
+version = "0.9.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+
+[workspace.lints.rust]
+unsafe_code = "warn" # pf-windows is the only crate that needs unsafe; it re-allows locally
+
+[workspace.lints.clippy]
+# Semantics bugs in a profiler are worse than compile friction.
+arithmetic_side_effects = "warn"
+cast_possible_truncation = "warn"
+cast_sign_loss = "warn"
+cast_possible_wrap = "warn"

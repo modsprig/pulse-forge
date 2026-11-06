@@ -1,0 +1,1 @@
+{"records":1000000,"jsonl":{"encode_ms":1805.1446,"decode_ms":1608.7662,"bytes":368716634,"bytes_per_record":368.716634},"binary":{"encode_ms":28.625700000000002,"decode_ms":4.4872000000000005,"bytes":120000000,"bytes_per_record":120.0},"ratio_binary_over_jsonl_bytes":0.3254531771409044}

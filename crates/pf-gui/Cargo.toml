@@ -1,0 +1,35 @@
+[package]
+name = "pf-gui"
+description = "PulseForge native GUI (egui/eframe + WGPU) over the daemon/query stack"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[lib]
+name = "pf_gui"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pulseforge-gui"
+path = "src/main.rs"
+
+# The workspace's first deliberate product dependency (ADR-015): the native
+# UI toolkit chosen by ADR-002 and validated by the PF-008 spike. All other
+# crates remain zero-dependency.
+[dependencies]
+pf-types = { path = "../pf-types" }
+pf-platform = { path = "../pf-platform" }
+pf-storage = { path = "../pf-storage" }
+pf-analysis = { path = "../pf-analysis" }
+eframe = { version = "0.27", default-features = false, features = ["wgpu", "glow", "wayland", "x11", "accesskit"] }
+egui = "0.27"
+wgpu = "0.19"
+egui-wgpu = "0.27"
+
+[target."cfg(windows)".dependencies]
+pf-daemon = { path = "../pf-daemon" }
+pf-windows = { path = "../pf-windows" }
+
+[lints]
+workspace = true

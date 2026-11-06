@@ -1,0 +1,13 @@
+[package]
+name = "pf-platform"
+description = "PulseForge OS-neutral collector contracts, recorder loop and storage paths"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+pf-types = { path = "../pf-types" }
+
+[lints]
+workspace = true
