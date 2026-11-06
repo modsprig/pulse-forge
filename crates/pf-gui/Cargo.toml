@@ -22,7 +22,7 @@ pf-types = { path = "../pf-types" }
 pf-platform = { path = "../pf-platform" }
 pf-storage = { path = "../pf-storage" }
 pf-analysis = { path = "../pf-analysis" }
-eframe = { version = "0.27", default-features = false, features = ["wgpu", "glow", "wayland", "x11", "accesskit"] }
+eframe = { version = "0.32", default-features = false, features = ["wgpu", "glow", "wayland", "x11", "accesskit"] }
 egui = "0.27"
 wgpu = "0.19"
 egui-wgpu = "0.27"
