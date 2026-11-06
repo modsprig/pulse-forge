@@ -25,7 +25,7 @@ pf-analysis = { path = "../pf-analysis" }
 eframe = { version = "0.27", default-features = false, features = ["wgpu", "glow", "wayland", "x11", "accesskit"] }
 egui = "0.27"
 wgpu = "0.19"
-egui-wgpu = "0.27"
+egui-wgpu = "0.32"
 
 [target."cfg(windows)".dependencies]
 pf-daemon = { path = "../pf-daemon" }
