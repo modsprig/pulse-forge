@@ -46,7 +46,7 @@ jobs:
           name: windows-x64-release
           path: dist
       - name: Attach to the GitHub release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             dist/*.zip
